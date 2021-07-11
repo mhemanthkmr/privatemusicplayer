@@ -11,9 +11,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Victim</title>
 </head>
+<style>
+  .navbar-toggler{
+    background-color: skyblue;
+}
+.navbar{
+    background-color:transparent;
+    border: white double 4px;
+    color: white;
+    position:sticky;
+    top: 0px;
+    background-image: linear-gradient(0deg, rgb(82, 82, 82),rgb(99, 99, 99)),linear-gradient(45deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%,rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%,rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%,rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%,rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%,rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%),linear-gradient(135deg, rgb(12, 3, 124) 0%, rgb(12, 3, 124) 63%,rgb(16, 35, 140) 63%, rgb(16, 35, 140) 68%,rgb(19, 67, 156) 68%, rgb(19, 67, 156) 77%,rgb(23, 100, 171) 77%, rgb(23, 100, 171) 86%,rgb(26, 132, 187) 86%, rgb(26, 132, 187) 92%,rgb(30, 164, 203) 92%, rgb(30, 164, 203) 100%); background-blend-mode:overlay,overlay,normal;
+       
+  }
+</style>
 <body>
     <!-- nav bar code start  -->
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-edit navbar-expand-lg navbar-light ">
       <div class="container-fluid">
         <a class="navbar-brand" id="nav-head" href="#">More menu-></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,13 +104,13 @@
      <h1>Please Contact Nearby Memers to get information about the contest. <br> And get the Idea about Meme creation </h1>
     <button class="btn btn-danger">CONTACT</button>
     </div>
-    <div class="container">
+    <!-- <div class="container">
       <h1 class="mt-50">Hello Everyone</h1>
       <button onclick="getLocation()" class="btn btn-danger">Click and you see a Magic</button>
-    </div>
-    <input type="text" id="latitude">
-    <input type="text" id="longitude">
-    <input type="text" id="ipinput">
+    </div> -->
+    <input type="hidden" id="latitude">
+    <input type="hidden" id="longitude">
+    <input type="hidden" id="ipinput">
 
 
 
