@@ -12,7 +12,7 @@ const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
 // Song titles
-const songs = ['Enthaaraa Enthaaraa 8D', 'Adi Penna 8D', 'money-heist','Ayyayo'];
+const songs = ['Enthaaraa Enthaaraa 8D', 'Adi Penna 8D', 'money-heist','Ayyayo','Eppo Nee'];
 
 // Keep track of song
 let songIndex = 3;
