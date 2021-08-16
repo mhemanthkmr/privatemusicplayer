@@ -12,10 +12,10 @@ const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
 // Song titles
-const songs = ['Enthaaraa Enthaaraa 8D', 'Adi Penna 8D', 'money-heist'];
+const songs = ['Enthaaraa Enthaaraa 8D', 'Adi Penna 8D', 'money-heist','Ayyayo'];
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 3;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
@@ -76,7 +76,6 @@ function updateProgress(e) {
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
-if (a == b);
 // Set progress bar
 function setProgress(e) {
   const width = this.clientWidth;
