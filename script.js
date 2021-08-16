@@ -15,7 +15,7 @@ const durTime = document.querySelector('#durTime');
 const songs = ['Enthaaraa Enthaaraa 8D', 'Adi Penna 8D', 'money-heist','Ayyayo','Eppo Nee','Otha Sollala','Pirai Thedum'];
 
 // Keep track of song
-let songIndex = 3;
+let songIndex = 0;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
