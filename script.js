@@ -76,7 +76,7 @@ function updateProgress(e) {
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
 }
-
+if (a == b);
 // Set progress bar
 function setProgress(e) {
   const width = this.clientWidth;
